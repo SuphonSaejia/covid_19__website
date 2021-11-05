@@ -1,0 +1,45 @@
+@font-face {
+    font-family: CloudBold;
+    src: url("../font/Cloud-Bold.ttf") 
+}
+@font-face {
+    font-family: CloudLight;
+    src: url("../font/Cloud-Light.ttf")
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "CloudBold";
+  color:white;
+}
+
+/* 61030001 กรุงไทย สุ่มพ่วง */
+#box{
+    background: #093F53;
+    box-shadow: 5px 5px 15px #0000001A;
+    border-radius: 60px;
+    opacity: 1;
+}
+#box2{
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#box3{
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+.circle{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 23px; 
+    height: 15px; 
+    width: 15px; 
+    border-radius: 360px;
+}
+
+
