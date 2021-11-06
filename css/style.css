@@ -40,4 +40,30 @@ body
     border-radius: 360px;
 }
 
+#box_2{
 
+    background: #F50204 0% 0% no-repeat padding-box; border: 1px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
+#box_3{
+  
+    background: #782D28 0% 0% no-repeat padding-box; border: 1px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
+#box_4{
+    background: #003853 0% 0% no-repeat padding-box; border: 1px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
+#box_5{
+    background: #616161 0% 0% no-repeat padding-box; border: 1px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
+#box_6{
+    background: #2E2D29 0% 0% no-repeat padding-box; border: 1px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
