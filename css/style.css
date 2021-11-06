@@ -16,9 +16,7 @@ body
   color:white;
 }
 
-/* 61030001 กรุงไทย สุ่มพ่วง */
 #box{
-    background: #093F53;
     box-shadow: 5px 5px 15px #0000001A;
     border-radius: 60px;
     opacity: 1;

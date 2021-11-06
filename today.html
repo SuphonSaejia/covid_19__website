@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./script/getApi.js"></script>
+    <script src="../script/main_chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>COVID-19</title>
+</head>
+<body>
+    <div style=" position: absolute; width: 100%; padding-top: -35px;">
+        <div style=" display: flex; justify-content: flex-end;">
+             <div class="circle" style="background-color: #FF6161;"></div>
+             <h5>Update date</h5>
+             <div style="width: 10px;"></div>
+             <h5 id="Update_date" >2021-11-03  07:30:52</h5>
+             <div style="width: 20px;"></div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div id="menuToggle" style="margin-left:20px;">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div style="height: 31px;"></div>
+        <img style="height: 100%; width: 100%; " src="../images/logo.png">
+        <article style="height: 505px; padding-left: 160px; padding-right: 160px;">
+            <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px; background-color: #020202;">
+                <h2 style="text-align: center; font-size: 35px; margin-bottom: 10px;">รายงานสถานการณ์ COVID-19 ประจำวัน</h2>
+                <br>
+                <div style=" height: 100%; width: 100%; background: #FFCC00; border-radius: 10px; color: #000; display:flex; ">
+                    <div style="width: 296px;">
+                        <div style="margin-top: 21px;"></div>
+                        <div style="font-size: 30px; width: 100%; text-align: center;">ผู้ป่วยรายใหม่วันนี้</div>
+                        <div style="margin-top: 10px;"></div>
+                        <div id="new_case_excludeabroad" style="font-size: 45px; width: 100%; text-align: center;">1,944  ราย</div>
+                    </div>
+                    <div style="background-color: #646464; height:133px; width: 2px;"></div>
+                    <div>
+                        <div style="width: 292px;">
+                            <div style="margin-top: 10px;"></div>
+                            <div style="font-size: 30px; width: 100%; text-align: center;">ผู้ป่วยรายใหม่วันนี้</div>
+                            <div style="margin-left: 47px;">รวมผู้เดินทางจากต่างประเทศ</div>
+                        </div>
+                        <div id="New_case" style="font-size: 45px; width: 100%; text-align: center;">1,944  ราย</div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;"></div>
+                <div style="display: flex;">
+                    <div style="border: 2px solid #FE0000; color: #FE0000; width: 338px; height: 100%; text-align: center; border-radius: 6px;">
+                        <div style="margin-top: 10px;"></div>
+                        <div style="font-size: 35px;">เสียชีวิต</div>
+                        <div id="new_death" style="font-size: 40px;">213</div>
+                        <div style="font-size: 30px;">ราย</div>
+                        <div style="margin-top: 10px;"></div>
+                    </div>
+                    <div style="width: 60px;"></div>
+                    <div style="font-size: 25px; width: 100%;">
+                        <div style="margin-top: 20px;"></div>
+                        <div style="display: flex; width: 100%; justify-content: space-between;">
+                            <div style="color:#FFCC00 ;">ติดเชื้อสะสม</div>
+                            <div id="Total_case" style="color:#FFCC00 ;">888,555</div>
+                            <div style="display: flex; width: 73px; background-color:white; border-radius: 6px; color: black; font-size: 13px; padding: 0px 5px 0px 5px;">
+                                <img style="height: 25px; margin-top: 5px;" src="../images/up.png">
+                                <div style="width: 5px;"></div>
+                                <div id="New_case2" style="margin-top: 9px;">1,944</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px;"></div>
+                        <div style="display: flex; width: 100%; justify-content: space-between;">
+                            <div style="width: 111px;">หายแล้ว</div>
+                            <div id="total_recovered" >888,555</div>
+                            <div style="display: flex; width: 73px; background-color:white; border-radius: 6px; color: black; font-size: 13px; padding: 0px 5px 0px 5px;">
+                                <img style="height: 25px; margin-top: 5px;" src="../images/dowe.png">
+                                <div style="width: 5px;"></div>
+                                <div id="new_recovered" style="margin-top: 9px;">1,944</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px;"></div>
+                        <div style="display: flex; width: 100%; justify-content: space-between;">
+                            <div >เสียชีวิตรวม</div>
+                            <div id="total_death">888,555</div>
+                            <div style="display: flex; width: 73px; background-color:white; border-radius: 6px; color: black; font-size: 13px; padding: 0px 5px 0px 5px;">
+                                <img style="height: 25px; margin-top: 5px;" src="../images/dowe.png">
+                                <div style="width: 5px;"></div>
+                                <div id="new_death2" style="margin-top: 9px;">1,944</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </article>
+        <footer  style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 10px; ">
+            <div style=" margin-left: 50px;">
+                <img src="../images/icon.png" style="width: 60px; margin-left: 10px;">
+                <div style="height: 10px;"></div>
+                <div style="font-size: 18px;">กรมควบคุมโรค</div>
+                <div style="height: 5px;"></div>
+                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์ ตำบลตลาดขวัญ  อำเภอเมือง จังหวัดนนทบุรี 11000</div>
+            </div>
+            <div style="margin-right: 20px;">
+                <div style="height: 99px"></div>
+                <div style="font-size: 18px;">61030008 จณิสตา พิมพาทอง</div>
+                <div style="font-size: 18px;">61030008@kmitl.ac.th</div>
+            </div>
+        </footer>
+      </main>
+      <script src="./script/toDay2.js"></script>
+</body>
