@@ -17,6 +17,7 @@
         heal_total.textContent = response[1]['total_recovered']+ " ราย";
         dead.textContent = response[1]['new_death']+ " ราย";
         dead_total.textContent = response[1]['total_death']+ " ราย";
+        document.getElementById("loading").innerHTML =``;
         }
     });
 })();    

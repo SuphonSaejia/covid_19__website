@@ -10,6 +10,7 @@ function Date_search(){
 
 function covid(data_t){
     console.log(search);
+    document.getElementById("loading").innerHTML =``;
     var count = 0;
     while(1){
         var search_jv = data_t[count]['txn_date'];
@@ -24,6 +25,7 @@ function covid(data_t){
       }
       count++;
     }
+    
     
 }
 }
