@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>COVID-19</title>
+</head>
+<body>
+    <div style=" position: absolute; width: 100%; padding-top: -35px;">
+        <div style=" display: flex; justify-content: flex-end;">
+             <div class="circle" style="background-color: #FF6161;"></div>
+             <h5>Update date</h5>
+             <div style="width: 10px;"></div>
+             <h5 id="Update_date" >2021-11-03  07:30:52</h5>
+             <div style="width: 20px;"></div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div id="menuToggle" style="margin-left:20px;">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div style="height: 31px;"></div>
+        <img style="height: 100%; width: 100%; " src="../images/logo.png">
+        <article style="height: 473px; padding-left: 160px; padding-right: 160px;">
+            <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px; background-color: #08394F;">
+                <h2 style="text-align: center; font-size: 28px; margin-bottom: -16px;">รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2</h2>
+                <h2 style="text-align: center; font-size: 25px; margin-bottom: 15px;">(ตั้งแต่ 12/01/2020 – 31/03/2021)</h2>
+              <div style="width: 100%; display: flex; justify-content: right; margin-bottom: 17px; ">
+                <button>download</button>
+                <div style="width: 4px;"></div>
+                <div>
+                    <input type="date" id="datesearch" name="trip-start" value="2021-01-12" min="2021-01-12" max="2021-03-31" style="padding-left: 10px; height: 30px;">
+                  </div>
+                  <div style="width: 4px;"></div>
+                  <button style="width: 60px;" type="submit" onclick="Date_search()">ค้นหา</button>
+              </div>
+
+
+              <div id="J_box_1" style="margin-top: 5px; width: 100%; padding-top: 2px; padding-bottom: 10px; margin-bottom: 18px;">
+                <div style="width: 100%;  display: grid; grid-template-columns: 40% 10% 40%;">
+                    <div>
+                        <div id="#" style="text-align: center; font-size: 30px; width: 100%; margin-top: 10px; ">ติดเชื้อเพิ่ม</div>
+                        <div id="add" style="text-align: center; font-size: 30px; width: 100%; ">1944 ราย</div>
+                    </div>
+                    <div></div>
+                    <div>
+                        <div id="#" style="text-align: left; font-size: 30px; width: 100%; margin-top: 10px; ">สะสม</div>
+                        <div id="add_total" style="text-align: left; font-size: 30px; width: 100%; ">1944 ราย</div>
+                    </div>
+                </div>
+            </div> 
+            <div style="width: 100%;  display: grid; grid-template-columns: 48% 4% 48%;">
+                <div id="J_box_2" style="margin-top: 5px; width: 100%; padding-top: 2px; margin-bottom: 18px;">
+                    <div style="width: 100%;  display: grid; grid-template-columns: 40% 10% 40%;">
+                        <div>
+                            <div id="#" style="text-align: left; font-size: 22px; width: 100%; margin-top: 10px; margin-left: 23px; color: #09FE00;">รักษา</div>
+                            <div id="heal" style="text-align: center; font-size: 22px; width: 100%; margin-left: 10px; margin-bottom: 10px; color: #09FE00;">1944 ราย</div>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div id="#" style="text-align: left; font-size: 22px; width: 100%; margin-top: 10px; color: #09FE00; ">สะสม</div>
+                            <div id="heal_total" style="text-align: left; font-size: 22px; width: 100%; color: #09FE00; ">1944 ราย</div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div id="J_box_3" style="margin-top: 5px; width: 100%; padding-top: 2px; margin-bottom: 18px;">
+                    <div style="width: 100%;  display: grid; grid-template-columns: 40% 10% 40%;">
+                        <div>
+                            <div id="#" style="text-align: left; font-size: 22px; width: 100%; margin-top: 10px; margin-left: 23px; color: #FE0000; ">เสียชีวิต</div>
+                            <div id="dead" style="text-align: center; font-size: 22px; width: 100%; margin-left: 10px; color: #FE0000;">1944 ราย</div>
+                        </div>
+                        <div></div>
+                        <div>
+                            <div id="#" style="text-align: left; font-size: 22px; width: 100%; margin-top: 10px; color: #FE0000; ">สะสม</div>
+                            <div id="dead_total" style="text-align: left; font-size: 22px; width: 100%; color: #FE0000;">1944 ราย</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            </div>
+        </article>
+        <footer  style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 10px; ">
+            <div style=" margin-left: 50px;">
+                <img src="../images/icon.png" style="width: 60px; margin-left: 10px;">
+                <div style="height: 10px;"></div>
+                <div style="font-size: 18px;">กรมควบคุมโรค</div>
+                <div style="height: 5px;"></div>
+                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์ ตำบลตลาดขวัญ  อำเภอเมือง จังหวัดนนทบุรี 11000</div>
+            </div>
+            <div style="margin-right: 20px;">
+                <div style="height: 99px"></div>
+                <div style="font-size: 18px;">61030060 สุพล แซ่เจี่ย</div>
+                <div style="font-size: 18px;">61030060@kmitl.ac.th</div>
+            </div>
+        </footer>
+      </main>
+      <script src="./script/covid_data1.js"></script>
+      <script src="./script/covid_datasearch.js"></script>
+
+</body>

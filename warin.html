@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>COVID-19</title>
+</head>
+<body>
+    <div style=" position: absolute; width: 100%; padding-top: -35px;">
+        <div style=" display: flex; justify-content: flex-end;">
+             <div class="circle" style="background-color: #FF6161;"></div>
+             <h5>Update date</h5>
+             <div style="width: 10px;"></div>
+             <h5 id="Update_date" >2021-11-03  07:30:52</h5>
+             <div style="width: 20px;"></div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div id="menuToggle" style="margin-left:20px;">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
+            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div style="height: 31px;"></div>
+        <img style="height: 100%; width: 100%; " src="../images/logo.png">
+        <article style=" padding-left: 160px; padding-right: 160px;">
+            <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px;  background-color: #093D52;">
+                <h2 style="text-align: center; font-size: 31px; margin-bottom: 17px;">ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</h2>
+              <div style="width: 100%; display: flex; justify-content: right; margin-bottom: 17px; ">
+
+                  <div style="margin-top: 4px;">จังหวัด</div>
+                  <div style="width: 10px;"></div>
+                  <div>
+                      <select id="province" style="background: #FFFFFF26 0% 0% no-repeat padding-box; width: 173px; height: 30px; background: no-repeat right #FFFFFF; font-family: Cloudlight">
+                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                        <option value="กระบี่">กระบี่ </option>
+                        <option value="กาญจนบุรี">กาญจนบุรี </option>
+                        <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                        <option value="กำแพงเพชร">กำแพงเพชร </option>
+                        <option value="ขอนแก่น">ขอนแก่น</option>
+                        <option value="จันทบุรี">จันทบุรี</option>
+                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                        <option value="ชัยนาท">ชัยนาท </option>
+                        <option value="ชัยภูมิ">ชัยภูมิ </option>
+                        <option value="ชุมพร">ชุมพร </option>
+                        <option value="ชลบุรี">ชลบุรี </option>
+                        <option value="เชียงใหม่">เชียงใหม่ </option>
+                        <option value="เชียงราย">เชียงราย </option>
+                        <option value="ตรัง">ตรัง </option>
+                        <option value="ตราด">ตราด </option>
+                        <option value="ตาก">ตาก </option>
+                        <option value="นครนายก">นครนายก </option>
+                        <option value="นครปฐม">นครปฐม </option>
+                        <option value="นครพนม">นครพนม </option>
+                        <option value="นครราชสีมา">นครราชสีมา </option>
+                        <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                        <option value="นครสวรรค์">นครสวรรค์ </option>
+                        <option value="นราธิวาส">นราธิวาส </option>
+                        <option value="น่าน">น่าน </option>
+                        <option value="นนทบุรี">นนทบุรี </option>
+                        <option value="บึงกาฬ">บึงกาฬ</option>
+                        <option value="บุรีรัมย์">บุรีรัมย์</option>
+                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                        <option value="ปทุมธานี">ปทุมธานี </option>
+                        <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                        <option value="ปัตตานี">ปัตตานี </option>
+                        <option value="พะเยา">พะเยา </option>
+                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                        <option value="พังงา">พังงา </option>
+                        <option value="พิจิตร">พิจิตร </option>
+                        <option value="พิษณุโลก">พิษณุโลก </option>
+                        <option value="เพชรบุรี">เพชรบุรี </option>
+                        <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                        <option value="แพร่">แพร่ </option>
+                        <option value="พัทลุง">พัทลุง </option>
+                        <option value="ภูเก็ต">ภูเก็ต </option>
+                        <option value="มหาสารคาม">มหาสารคาม </option>
+                        <option value="มุกดาหาร">มุกดาหาร </option>
+                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                        <option value="ยโสธร">ยโสธร </option>
+                        <option value="ยะลา">ยะลา </option>
+                        <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                        <option value="ระนอง">ระนอง </option>
+                        <option value="ระยอง">ระยอง </option>
+                        <option value="ราชบุรี">ราชบุรี</option>
+                        <option value="ลพบุรี">ลพบุรี </option>
+                        <option value="ลำปาง">ลำปาง </option>
+                        <option value="ลำพูน">ลำพูน </option>
+                        <option value="เลย">เลย </option>
+                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                        <option value="สกลนคร">สกลนคร</option>
+                        <option value="สงขลา">สงขลา </option>
+                        <option value="สมุทรสาคร">สมุทรสาคร </option>
+                        <option value="สมุทรปราการ">สมุทรปราการ </option>
+                        <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                        <option value="สระแก้ว">สระแก้ว </option>
+                        <option value="สระบุรี">สระบุรี </option>
+                        <option value="สิงห์บุรี">สิงห์บุรี </option>
+                        <option value="สุโขทัย">สุโขทัย </option>
+                        <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                        <option value="สุรินทร์">สุรินทร์ </option>
+                        <option value="สตูล">สตูล </option>
+                        <option value="หนองคาย">หนองคาย </option>
+                        <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                        <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                        <option value="อุดรธานี">อุดรธานี </option>
+                        <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                        <option value="อุทัยธานี">อุทัยธานี </option>
+                        <option value="อุบลราชธานี">อุบลราชธานี</option>
+                        <option value="อ่างทอง">อ่างทอง </option>
+                      </select>
+                      <input style="height: 30px; border: 1px;" type="date" id="D_Date" name="trip-start"
+                        value="2021-01-04"
+                        >
+                        <input style="height: 30px;" type="submit" value="Enter" onclick="onClicks()">
+                  </div>
+              </div>
+              <div style="width: 100%;">
+                <div>
+                    <div>
+                        <table id="tableData" style="width: 100%;">
+                            
+                    </table>
+                    </div>
+                    
+              </div>
+            
+              
+              
+
+            </div>  
+            </div>
+        <div style="height: 20px;"></div>    
+        </article>
+        <footer  style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 10px; ">
+            <div style=" margin-left: 50px;">
+                <img src="../images/icon.png" style="width: 60px; margin-left: 10px;">
+                <div style="height: 10px;"></div>
+                <div style="font-size: 18px;">กรมควบคุมโรค</div>
+                <div style="height: 5px;"></div>
+                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์ ตำบลตลาดขวัญ  อำเภอเมือง จังหวัดนนทบุรี 11000</div>
+            </div>
+            <div style="margin-right: 20px;">
+                <div style="height: 99px"></div>
+                <div style="font-size: 18px;">61030242 วรินรำไพ ขุนภักดี</div>
+                <div style="font-size: 18px;">61030242@kmitl.ac.th</div>
+            </div>
+        </footer>
+      </main>
+      <script type="text/javascript">
+       var data;
+(function () {
+    `use strict`;
+
+    $.ajax({
+        dataType: "json",
+        url: 'https://covid19.ddc.moph.go.th/api/Cases/round-3-line-lists',
+        success: function(response) {
+           Date.textContent = response['data'][0]['txn_date'];
+           var i = 0;
+           data = response;
+           for (index in response['data']){
+             if((response['data'][index]["txn_date"] == "2021-04-01") && (response['data'][index]["province"] == "กรุงเทพมหานคร")){
+               i++;
+              document.getElementById("tableData").innerHTML += 
+              `<tr class="trWhite">
+                    <td>${i}</td>
+                    <td>${response['data'][index]["gender"]}</td>
+                    <td>${response['data'][index]["age_number"]}</td>
+                    <td>${response['data'][index]["nationality"]}</td>
+                    <td>${response['data'][index]["job"] ?? '-'}</td>
+                    <td>${response['data'][index]["risk"]}</td>
+                    <td>${response['data'][index]["patient_type"]}</td>
+                    <td>${response['data'][index]["province"]}</td>
+              </tr>`;
+             }
+           }
+        }
+    });
+})();    
+function onClicks(){
+  
+    var D_Date = document.getElementById('D_Date').value;
+    var _province = $('#province').val();
+    var d = parseInt(D_Date.split("-")[1]);
+    var m = parseInt(D_Date.split("-")[2]);
+    var y = parseInt(D_Date.split("-")[0]);
+    var s ;
+    if(d<10 ){
+       d = '0'+d;
+    }
+    if(m<10 ){
+       m = '0'+m;
+    }
+    s = y+'-'+m+'-'+d;
+    var i = 0;
+    document.getElementById("tableData").innerHTML =  `
+    <tr class="trBlue">
+          <td>NO</td>
+          <td>SEX</td>
+          <td>AGE</td>
+          <td>NATIONALITY</td>
+          <td>JOB</td>
+          <td>RISK</td>
+          <td>PATIENT_TYPE</td>
+          <td>PROVINCE</td>
+    </tr>
+    `;
+    console.log(s);
+    console.log(_province);
+      for (index in data['data']){
+        console.log(data['data'][index]["txn_date"]);
+        if((data['data'][index]["txn_date"] == s) && (data['data'][index]["province"] == _province)){
+          i++;
+          
+        document.getElementById("tableData").innerHTML += 
+              `<tr class="trWhite">
+                    <td>${i}</td>
+                    <td>${data['data'][index]["gender"]}</td>
+                    <td>${data['data'][index]["age_number"]}</td>
+                    <td>${data['data'][index]["nationality"]}</td>
+                    <td>${data['data'][index]["job"] ?? '-'}</td>
+                    <td>${data['data'][index]["risk"]}</td>
+                    <td>${data['data'][index]["patient_type"]}</td>
+                    <td>${data['data'][index]["province"]}</td>
+              </tr>`;
+      }
+    }
+}
+      </script>
+      
+</body>

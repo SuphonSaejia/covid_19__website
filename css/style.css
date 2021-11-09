@@ -115,3 +115,24 @@ body
     display: flex;
     justify-content: space-between;
 }
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tr{
+    
+    text-align: center;
+    font-family: CloudLight;
+    font-size: small;
+    height: 40px;
+}
+.trPink{
+    background-color: #FF708E;
+}
+.trBlue{
+    background-color: #7B8FD1;
+}
+.trWhite{
+    background-color: white;
+    color: #000000;
+}
