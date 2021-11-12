@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mataphon.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>COVID-19</title>
@@ -43,8 +43,8 @@
         <div style="height: 31px;"></div>
         <img style="height: 100%; width: 100%; " src="../images/logo.png">
         <article style="height: 505px; padding-left: 160px; padding-right: 160px;">
-            <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px;  background-color: #094152;">
-                <h2 style="text-align: center; font-size: 31px; margin-bottom: 17px;">รายงานสถานการณ์ COVID-19 แยกตามรายจังหวัด</h2>
+            <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px;  background: #093F53;">
+                <h2 style="text-align: center; font-size: 35px; margin-bottom: 17px;">รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</h2>
               <div style="width: 100%; display: flex; justify-content: right; margin-bottom: 17px; ">
 
                   <div style="margin-top: 4px;">จังหวัด</div>
@@ -134,37 +134,33 @@
                   </div>
                   <button type="submit" onclick="Test()">ค้นหา</button>
               </div>
-
-              <div style="width: 100%;  display: grid; grid-template-columns: 55% 5% 40%;">
-                <div>
-                    <div style="font-size: 27px;">ผู้ป่วยรายใหม่วันนี้</div>
-                        <div>
-                            <div id="box_2" style="margin-top: 32px; width: 100%; padding-top: 2px;">
-                                <div id="today_new" style="text-align: center; font-size: 50px; width: 100%; margin: 30px;">+ 161 ราย</div>
-                            </div>
-                            <div id="box_3" style="width: 100%; padding-top: 2px;">
-                                <div id="today_total" style="text-align: center; font-size: 25px; width: 100%; margin: 14px;">ผู้ป่วยรวมสะสม 20000 ราย</div>
-                            </div>
-                        </div>
-                    
+              <div style="width: 100%;  display: grid; grid-template-columns: 30% 5% 30% 5% 30%;">
+            <div>
+                <div style="font-size: 22px;">ผู้ป่วยรายใหม่วันนี้</div>
+                <div id="box-2" style="margin-top: 11px; width: 100%; padding-top: 2px;">
+                    <div id="new_d" style="text-align: center; font-size: 50px; width: 100%; margin-top: 50px; margin-bottom: 50px;">+ 161 ราย</div>
                 </div>
-                <div>  </div>
-                <div>
-                    <div style="font-size: 27px;">ผู้ป่วยรวมสะสม</div>
-                    <div>
-                        <div id="box_4" style="margin-top: 32px; width: 100%; padding-top: 2px; ">
-                            <div id="total" style="text-align: center; font-size: 40px; width: 100%; margin: 7px;">22555 ราย</div>
-                        </div>
-                        <div style="font-size: 27px; padding-top: 6px;">เสียชีวิต</div>
-                         <div id="box_5" style="margin-top: 5px; width: 100%; padding-top: 2px;">
-                            <div id="dead" style="text-align: center; font-size: 30px; width: 100%; margin: 3px;"> 18 ราย</div>
-                        </div>
-                        <div id="box_6" style="width: 100%; padding-top: 2px;">
-                            <div id="total_dead" style="text-align: center; font-size: 15px; width: 100%; margin: 3px;">เสียชีวิตสะสม 285 ราย</div>
-                        </div>
-                    </div>
+            </div>
+            <div></div>
+            <div>
+                <div style="font-size: 22px;">ผู้ป่วยรวมสะสม</div>
+                <div id="box-3" style="margin-top: 11px; width: 100%; padding-top: 2px;">
+                    <div id="total_new" style="text-align: center; font-size: 50px; width: 100%; margin-top: 50px; margin-bottom: 50px;"> 161 ราย</div>
                 </div>
-              </div>
+            </div>
+            <div></div>
+            <div>
+                <div style="font-size: 22px;">เสียชีวิต</div>
+                <div id="box-4" style="margin-top: 11px; width: 100%; padding-top: 2px; margin-bottom: 10px;">
+                    <div id="dead" style="text-align: center; font-size: 30px; width: 100%; margin-top: 25px; margin-bottom: 25px;"> 18 ราย</div>
+                </div>
+                <div style="font-size: 22px;">เสียชีวิตสะสม</div>
+                <div id="box-5" style="margin-top: 11px; width: 100%; padding-top: 2px;">
+                    <div id="total_dead" style="text-align: center; font-size: 30px; width: 100%; margin-top: 25px; margin-bottom: 25px;"> 18 ราย</div>
+                </div>
+            </div>
+            </div>
+      
             
               
               
@@ -181,12 +177,12 @@
             </div>
             <div style="margin-right: 20px;">
                 <div style="height: 99px"></div>
-                <div style="font-size: 18px;">61030017 ณปกรณ์ สุขเกษม</div>
-                <div style="font-size: 18px;">61030001@kmitl.ac.th</div>
+                <div style="font-size: 18px;">61030045 เมธพนธ์ ช่างอาจ</div>
+                <div style="font-size: 18px;">61030045@kmitl.ac.th</div>
             </div>
         </footer>
       </main>
-      <script src="./script/covid_data_jv.js"></script>
-      <script src="./script/covid_data.js"></script>
+      <script src="./script/covid_search.js"></script>
+      <script src="./script/covid_show.js"></script>
 
 </body>

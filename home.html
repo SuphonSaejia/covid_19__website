@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./script/getApi.js"></script>
+    <script src="../script/main_chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>COVID-19</title>
+</head>
+<body>
+    <div style=" position: absolute; width: 100%; padding-top: -35px;">
+        <div style=" display: flex; justify-content: flex-end;">
+             <div class="circle" style="background-color: #FF6161;"></div>
+             <h5>Update date</h5>
+             <div style="width: 10px;"></div>
+             <h5 id="Update_date" >2021-11-03  07:30:52</h5>
+             <div style="width: 20px;"></div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div id="menuToggle" style="margin-left:20px;">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="today.html"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+            <a href="Napakorn.html"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="peerapon.html"><li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
+            <a href="Napath.html"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 </li></a>
+            <a href="todayByProvince.html"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 แยกตามรายจังหวัด</li></a>
+            <a href="warin.html"><li>ข้อมูลผู้ป่วยระลอก 3 </li></a>
+            <a href="Suphon.html"><li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2</li></a>
+            <a href="Jirawat.html"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 </li></a>
+            <a href="todayByProvince copy.html"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2  แยกตามรายจังหวัด</li></a>
+            <a href="Maytaphon.html"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
+            <a href="kungthai.html"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div style="height: 882px; width: 100%;  background-image: url('./images/aaaa.png');  ">
+            <div style="font-size: 50px; text-align: center; padding-top: 350px; ">
+                COVID-19 SITUATION REPORT
+            <div>
+        </div>
+        
+     
+        <footer  style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 47px; margin-top: 274px;">
+            <div style=" margin-left: 50px;">
+                <img src="../images/icon.png" style="width: 60px; margin-left: 10px;">
+                <div style="height: 10px;"></div>
+                <div style="font-size: 18px;">กรมควบคุมโรค</div>
+                <div style="height: 5px;"></div>
+                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์ ตำบลตลาดขวัญ  อำเภอเมือง จังหวัดนนทบุรี 11000</div>
+            </div>
+            <div style="margin-right: 20px;">
+                <div style="height: 99px"></div>
+            </div>
+        </footer>
+      </main>
+      <script src="./script/toDay.js"></script>
+</body>

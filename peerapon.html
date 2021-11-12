@@ -1,228 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>COVID-19</title>
 </head>
+
 <body>
     <div style=" position: absolute; width: 100%; padding-top: -35px;">
         <div style=" display: flex; justify-content: flex-end;">
-             <div class="circle" style="background-color: #FF6161;"></div>
-             <h5>Update date</h5>
-             <div style="width: 10px;"></div>
-             <h5 id="Update_date" >2021-11-03  07:30:52</h5>
-             <div style="width: 20px;"></div>
+            <div class="circle" style="background-color: #FF6161;"></div>
+            <h5>Update date</h5>
+            <div style="width: 10px;"></div>
+            <h5 id="Update_date">2021-11-03 07:30:52</h5>
+            <div style="width: 20px;"></div>
         </div>
     </div>
     <nav role="navigation">
         <div id="menuToggle" style="margin-left:20px;">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
-            <a href="#"><li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li></a>
-            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li></a>
-            <a href="#"><li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li></a>
-            <a href="#"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
-          </ul>
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="today.html">
+                    <li>รายงานสถานการณ์ COVID-19 ประจำวัน</li>
+                </a>
+                <a href="Napakorn.html">
+                    <li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li>
+                </a>
+                <a href="peerapon.html">
+                    <li>ข้อมูลผู้ป่วยประจำวัน(Line Lists)</li>
+                </a>
+                <a href="Napath.html">
+                    <li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li>
+                </a>
+                <a href="todayByProvince.html">
+                    <li>รายงานสถานการณ์ COVID-19 ระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน) แยกตามรายจังหวัด</li>
+                </a>
+                <a href="warin.html">
+                    <li>ข้อมูลผู้ป่วยระลอก 3 (ตั้งแต่ 01/04/2021 –ปัจจุบัน)</li>
+                </a>
+                <a href="Suphon.html">
+                    <li>ข้อมูลผู้ป่วยระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li>
+                </a>
+                <a href="Jirawat.html">
+                    <li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021)</li>
+                </a>
+                <a href="todayByProvince copy.html">
+                    <li>รายงานสถานการณ์ COVID-19 ระลอก 1 ถึงระลอก 2 (ตั้งแต่ 12/01/2020 – 31/03/2021) แยกตามรายจังหวัด
+                    </li>
+                </a>
+                <a href="Maytaphon.html">
+                    <li>รายงานสถานการณ์ COVID-19 ประจำวัน แยกตามรายจังหวัด</li>
+                </a>
+                <a href="kungthai.html"><li>รายงานสถานการณ์ COVID-19 ประจำวัน</li></a>
+            </ul>
         </div>
-      </nav>
-      <main>
+    </nav>
+    <main>
         <div style="height: 31px;"></div>
-        <img style="height: 100%; width: 100%; " src="../images/logo.png">
-        <article style="height: 709px; padding-left: 160px; padding-right: 160px;">
+        <img style="height: 100%; width: 100%; " src="./images/logo.png">
+        <article style=" padding-left: 160px; padding-right: 160px;">
             <div id="box" style=" margin-top: 5px; padding: 50px; padding-top: 10px;  background-color: #000000;">
-                <h2 style="text-align: center; font-size: 31px; margin-bottom: 17px;">ข้อมูลผู้ป่วยประจำวัน (Line Lists)</h2>
-              <div style="width: 100%; display: flex; justify-content: right; margin-bottom: 17px; ">
+                <h2 style="text-align: center; font-size: 31px; margin-bottom: 17px;">ข้อมูลผู้ป่วยประจำวัน (Line Lists)
+                </h2>
+                <div style="width: 100%; display: flex; justify-content: right; margin-bottom: 17px; ">
 
-                  <div style="margin-top: 4px;">จังหวัด</div>
-                  <div style="width: 10px;"></div>
-                  <div>
-                      <select id="JV" style="background: #FFFFFF26 0% 0% no-repeat padding-box; width: 173px; height: 30px; background: no-repeat right #FF708E; font-family: Cloudlight">
-                        <option value=" ">---เลือกจังหวัด---</option>
-                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                        <option value="กระบี่">กระบี่ </option>
-                        <option value="กาญจนบุรี">กาญจนบุรี </option>
-                        <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
-                        <option value="กำแพงเพชร">กำแพงเพชร </option>
-                        <option value="ขอนแก่น">ขอนแก่น</option>
-                        <option value="จันทบุรี">จันทบุรี</option>
-                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
-                        <option value="ชัยนาท">ชัยนาท </option>
-                        <option value="ชัยภูมิ">ชัยภูมิ </option>
-                        <option value="ชุมพร">ชุมพร </option>
-                        <option value="ชลบุรี">ชลบุรี </option>
-                        <option value="เชียงใหม่">เชียงใหม่ </option>
-                        <option value="เชียงราย">เชียงราย </option>
-                        <option value="ตรัง">ตรัง </option>
-                        <option value="ตราด">ตราด </option>
-                        <option value="ตาก">ตาก </option>
-                        <option value="นครนายก">นครนายก </option>
-                        <option value="นครปฐม">นครปฐม </option>
-                        <option value="นครพนม">นครพนม </option>
-                        <option value="นครราชสีมา">นครราชสีมา </option>
-                        <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
-                        <option value="นครสวรรค์">นครสวรรค์ </option>
-                        <option value="นราธิวาส">นราธิวาส </option>
-                        <option value="น่าน">น่าน </option>
-                        <option value="นนทบุรี">นนทบุรี </option>
-                        <option value="บึงกาฬ">บึงกาฬ</option>
-                        <option value="บุรีรัมย์">บุรีรัมย์</option>
-                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
-                        <option value="ปทุมธานี">ปทุมธานี </option>
-                        <option value="ปราจีนบุรี">ปราจีนบุรี </option>
-                        <option value="ปัตตานี">ปัตตานี </option>
-                        <option value="พะเยา">พะเยา </option>
-                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
-                        <option value="พังงา">พังงา </option>
-                        <option value="พิจิตร">พิจิตร </option>
-                        <option value="พิษณุโลก">พิษณุโลก </option>
-                        <option value="เพชรบุรี">เพชรบุรี </option>
-                        <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
-                        <option value="แพร่">แพร่ </option>
-                        <option value="พัทลุง">พัทลุง </option>
-                        <option value="ภูเก็ต">ภูเก็ต </option>
-                        <option value="มหาสารคาม">มหาสารคาม </option>
-                        <option value="มุกดาหาร">มุกดาหาร </option>
-                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
-                        <option value="ยโสธร">ยโสธร </option>
-                        <option value="ยะลา">ยะลา </option>
-                        <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
-                        <option value="ระนอง">ระนอง </option>
-                        <option value="ระยอง">ระยอง </option>
-                        <option value="ราชบุรี">ราชบุรี</option>
-                        <option value="ลพบุรี">ลพบุรี </option>
-                        <option value="ลำปาง">ลำปาง </option>
-                        <option value="ลำพูน">ลำพูน </option>
-                        <option value="เลย">เลย </option>
-                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-                        <option value="สกลนคร">สกลนคร</option>
-                        <option value="สงขลา">สงขลา </option>
-                        <option value="สมุทรสาคร">สมุทรสาคร </option>
-                        <option value="สมุทรปราการ">สมุทรปราการ </option>
-                        <option value="สมุทรสงคราม">สมุทรสงคราม </option>
-                        <option value="สระแก้ว">สระแก้ว </option>
-                        <option value="สระบุรี">สระบุรี </option>
-                        <option value="สิงห์บุรี">สิงห์บุรี </option>
-                        <option value="สุโขทัย">สุโขทัย </option>
-                        <option value="สุพรรณบุรี">สุพรรณบุรี </option>
-                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
-                        <option value="สุรินทร์">สุรินทร์ </option>
-                        <option value="สตูล">สตูล </option>
-                        <option value="หนองคาย">หนองคาย </option>
-                        <option value="หนองบัวลำภู">หนองบัวลำภู </option>
-                        <option value="อำนาจเจริญ">อำนาจเจริญ </option>
-                        <option value="อุดรธานี">อุดรธานี </option>
-                        <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
-                        <option value="อุทัยธานี">อุทัยธานี </option>
-                        <option value="อุบลราชธานี">อุบลราชธานี</option>
-                        <option value="อ่างทอง">อ่างทอง </option>
-                      </select>
-                    
-                  </div>
-                  <!--<button type="submit" onclick="Test()">ค้นหา</button>/-->
-              </div>
-              <!--Table here-->
-              <div style="width: 100%;  ">
-                <div>
+                    <div style="margin-top: 4px;">จังหวัด</div>
+                    <div style="width: 10px;"></div>
                     <div>
-                        <table style="width: 100%;">
-                            <tr class="trPink">
-                                <td>NO</td>
-                                <td>SEX</td>
-                                <td>AGE</td>
-                                <td>NATIONALITY</td>
-                                <td>JOB</td>
-                                <td>RISK</td>
-                                <td>PROVINCE</td>
-                            </tr>
-                            <tr class="trWhite">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="trWhite">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="trWhite">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="trWhite">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="trWhite">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                    </table>
-                    </div>
-                    
-              </div>
-            
-              
-              
+                        <select id="jankvad"
+                            style="background: #FFFFFF26 0% 0% no-repeat padding-box; width: 173px; height: 30px; background: no-repeat right #FF708E; font-family: Cloudlight">
+                            <option value=" ">---เลือกจังหวัด---</option>
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="กระบี่">กระบี่ </option>
+                            <option value="กาญจนบุรี">กาญจนบุรี </option>
+                            <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                            <option value="กำแพงเพชร">กำแพงเพชร </option>
+                            <option value="ขอนแก่น">ขอนแก่น</option>
+                            <option value="จันทบุรี">จันทบุรี</option>
+                            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                            <option value="ชัยนาท">ชัยนาท </option>
+                            <option value="ชัยภูมิ">ชัยภูมิ </option>
+                            <option value="ชุมพร">ชุมพร </option>
+                            <option value="ชลบุรี">ชลบุรี </option>
+                            <option value="เชียงใหม่">เชียงใหม่ </option>
+                            <option value="เชียงราย">เชียงราย </option>
+                            <option value="ตรัง">ตรัง </option>
+                            <option value="ตราด">ตราด </option>
+                            <option value="ตาก">ตาก </option>
+                            <option value="นครนายก">นครนายก </option>
+                            <option value="นครปฐม">นครปฐม </option>
+                            <option value="นครพนม">นครพนม </option>
+                            <option value="นครราชสีมา">นครราชสีมา </option>
+                            <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                            <option value="นครสวรรค์">นครสวรรค์ </option>
+                            <option value="นราธิวาส">นราธิวาส </option>
+                            <option value="น่าน">น่าน </option>
+                            <option value="นนทบุรี">นนทบุรี </option>
+                            <option value="บึงกาฬ">บึงกาฬ</option>
+                            <option value="บุรีรัมย์">บุรีรัมย์</option>
+                            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                            <option value="ปทุมธานี">ปทุมธานี </option>
+                            <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                            <option value="ปัตตานี">ปัตตานี </option>
+                            <option value="พะเยา">พะเยา </option>
+                            <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                            <option value="พังงา">พังงา </option>
+                            <option value="พิจิตร">พิจิตร </option>
+                            <option value="พิษณุโลก">พิษณุโลก </option>
+                            <option value="เพชรบุรี">เพชรบุรี </option>
+                            <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                            <option value="แพร่">แพร่ </option>
+                            <option value="พัทลุง">พัทลุง </option>
+                            <option value="ภูเก็ต">ภูเก็ต </option>
+                            <option value="มหาสารคาม">มหาสารคาม </option>
+                            <option value="มุกดาหาร">มุกดาหาร </option>
+                            <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                            <option value="ยโสธร">ยโสธร </option>
+                            <option value="ยะลา">ยะลา </option>
+                            <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                            <option value="ระนอง">ระนอง </option>
+                            <option value="ระยอง">ระยอง </option>
+                            <option value="ราชบุรี">ราชบุรี</option>
+                            <option value="ลพบุรี">ลพบุรี </option>
+                            <option value="ลำปาง">ลำปาง </option>
+                            <option value="ลำพูน">ลำพูน </option>
+                            <option value="เลย">เลย </option>
+                            <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                            <option value="สกลนคร">สกลนคร</option>
+                            <option value="สงขลา">สงขลา </option>
+                            <option value="สมุทรสาคร">สมุทรสาคร </option>
+                            <option value="สมุทรปราการ">สมุทรปราการ </option>
+                            <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                            <option value="สระแก้ว">สระแก้ว </option>
+                            <option value="สระบุรี">สระบุรี </option>
+                            <option value="สิงห์บุรี">สิงห์บุรี </option>
+                            <option value="สุโขทัย">สุโขทัย </option>
+                            <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                            <option value="สุรินทร์">สุรินทร์ </option>
+                            <option value="สตูล">สตูล </option>
+                            <option value="หนองคาย">หนองคาย </option>
+                            <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                            <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                            <option value="อุดรธานี">อุดรธานี </option>
+                            <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                            <option value="อุทัยธานี">อุทัยธานี </option>
+                            <option value="อุบลราชธานี">อุบลราชธานี</option>
+                            <option value="อ่างทอง">อ่างทอง </option>
+                        </select>
 
-            </div>
-                <br>
-                <br>
-                <br>
-                <div style="width: 100%; text-align: center;">
-                    <h2>กราฟแสดงจำนวนของผู้ป่วยแต่ละจังหวัด</h2>
+                    </div>
+                    <button type="submit" onclick="search_in()">ค้นหา</button>
                 </div>
-                <div style="border: 1px solid #707070; border-radius: 8px; ">
-            <div id="chart_div" style="width: 600px; height: 400px;">
-            </div>
-        </div>
+                <!--Table here-->
+              
+                <div style="width: 100%;  ">
+                    <div>
+                        <div>
+                            <table id="tableData" style="width: 100%;">
+                                <tr class="trPink">
+                                    <td>NO</td>
+                                    <td>SEX</td>
+                                    <td>AGE</td>
+                                    <td>NATIONALITY</td>
+                                    <td>RISK</td>
+                                    <td>PROVINCE</td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <form action="getData">
+                <div style="display: flex; justify-content: right;">
+                <button type="button"  value="back" onclick="B_BACK()">BACK</button>
+                <button type="button"  value="next" onclick="N_Next()" >NEXT</button>
+                </div>
+                </form>
+               
                 
+
+           
+                
+           
+
             </div>
         </article>
-        <footer  style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 10px; margin-top: 311px;">
+        <footer
+            style="display: flex; justify-content: space-between; width: 100%; height: 160px; background-color: #171B29; padding-top: 15px; padding-bottom: 10px; margin-top: 10px;">
             <div style=" margin-left: 50px;">
-                <img src="../images/icon.png" style="width: 60px; margin-left: 10px;">
+                <img src="./images/icon.png" style="width: 60px; margin-left: 10px;">
                 <div style="height: 10px;"></div>
                 <div style="font-size: 18px;">กรมควบคุมโรค</div>
                 <div style="height: 5px;"></div>
-                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์ ตำบลตลาดขวัญ  อำเภอเมือง จังหวัดนนทบุรี 11000</div>
+                <div style="width: 289px; font-size: 16px; font-family: CloudLight;">ที่อยู่: 88/21 ถนน ติวานนท์
+                    ตำบลตลาดขวัญ อำเภอเมือง จังหวัดนนทบุรี 11000</div>
             </div>
             <div style="margin-right: 20px;">
                 <div style="height: 99px"></div>
@@ -230,48 +211,75 @@
                 <div style="font-size: 18px;">61030040@kmitl.ac.th</div>
             </div>
         </footer>
-      </main>
-      <!-- <script src="./script/covid_data_jv.js"></script>
-      <script src="./script/covid_data.js"></script> -->
-      <script>
-        google.charts.load('current', {packages: ['corechart', 'bar']});
-        google.charts.setOnLoadCallback(drawBasic);
+    </main>
 
-        function drawBasic() {
+    <script src="script/covid_deful_data.js"></script>
+    <script>
+        const target = `https://covid19.ddc.moph.go.th/api/Cases/today-cases-line-lists`;
+        getData();
+        async function getData() {
+         
+            var txd_date = [];
+            var CPatient = [];
+            var ages = [];
+            var CGender = [];
+            var nationalitys = [];
+            var jobs = [];
+            var risks = [];
+            var provinces = [];
 
-        var data = new google.visualization.arrayToDataTable([
-            ['Element', 'ยอดผู้ป่วย', {role: 'style'}],
-            ['bangkok', 50, '#ED8975'],
-            ['bangkok', 20, '#ED8975'],
-            ['bangkok', 80, '#ED8975'],
-            ['bangkok', 20, '#ED8975'],
-            ['bangkok', 30, '#ED8975'],
-            ['bangkok', 70, '#ED8975'],
-            ['', 100, 'color: #ffffff00'],
-            
-        ]);
-        
-        var option = {
-            chartArea: {width: "100%", height: "100%", 
-                bottom: 40, left: 40, 
-                top: 40, right: 40, 
-                backgroundColor: {
-                    fill: 'black',
-            }},
-            legend: {position: 'top'},
-            bar: {groupWidth: '50%'},
-            backgroundColor: {
-                fill: 'black',
-            },
-            hAxis: {textStyle: {color: 'white'}},
-            vAxis: {textStyle: {color: 'white'}},
+            var male = 0;
+            var female = 0;
+            var UnGender = 0;
+            const response = await fetch(target);
+            const data = await response.text();
+            const table = data.split('\n').splice(1);
+            var i = 0;
+            table.forEach(row => {
+               // console.log(row);
+                i++;
+                
+            if(i > 10){ console.log("a");
+                    return false;
+                }
+                else{
+                var columns = row.split(',');
+                var date = columns[0];
+                var IdPatient = columns[1];
+                var gender = columns[2];
+                var age = columns[3];
+                var AgeRange = columns[4];
+                var nationality = columns[5];
+                var job = columns[6];
+                var risk = columns[7];
+                var PatientType = columns[8];
+                var province = columns[9];
+                ages.push(columns[3]??"-");
+                nationalitys.push(columns[5]??"-");
+                jobs.push(columns[6]??"-");
+                risks.push(columns[7]??"-");
+                provinces.push(columns[8]??"-");
+                txd_date.push(columns[0]);
+                CPatient.push(columns[1]);
+                CGender.push(columns[2]);
+                console.log(job??"asdko");
+                // console.log(date,IdPatient,gender,age,AgeRange,nationality,job,risk,PatientType,province);
+                document.getElementById("tableData").innerHTML += 
+              `<tr class="trWhite">
+                    <td>${i}</td>
+                    <td>${columns[2]??"ไม่ระบุ"}</td>
+                    <td>${columns[3]??"ไม่ระบุ"}</td>
+                    <td>${nationality??"ไม่ระบุ"}</td>
+                    <td>${risk??"ไม่ระบุ"}</td>
+                    <td>${province??"ไม่ระบุ"}</td>
+              </tr>`; 
+                }
+            });
         }
 
-        var chart = new google.visualization.ColumnChart(
-        document.getElementById('chart_div'));
+    </script>
+    <script>
+       
+    </script>
 
-        chart.draw(data, option);
-    }
-      </script>
-      
 </body>

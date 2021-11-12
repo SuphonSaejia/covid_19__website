@@ -1,0 +1,60 @@
+@font-face {
+    font-family: CloudBold;
+    src: url("../font/Cloud-Bold.ttf") 
+}
+@font-face {
+    font-family: CloudLight;
+    src: url("../font/Cloud-Light.ttf")
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "CloudBold";
+  color:white;
+}
+#box{
+   
+    box-shadow: 5px 5px 15px #0000001A;
+    border-radius: 60px;
+    opacity: 1;
+}
+
+/*ใช้*/
+
+#box-2{
+
+    background: #D63434 0% 0% no-repeat padding-box; border: 1px solid #D63434;
+    display: flex;
+    justify-content: space-between;
+}
+#box-3{
+  
+    background: #BFA911 0% 0% no-repeat padding-box; border: 1px solid #BFA911;
+    display: flex;
+    justify-content: space-between;
+}
+#box-4{
+    background: #616161 0% 0% no-repeat padding-box; border: 1px solid #616161;
+    display: flex;
+    justify-content: space-between;
+}
+#box-5{
+    background: #616161 0% 0% no-repeat padding-box; border: 1px solid #616161;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*ถึง*/
+.circle{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 23px; 
+    height: 15px; 
+    width: 15px; 
+    border-radius: 360px;
+}
+
+

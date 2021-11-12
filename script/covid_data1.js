@@ -1,5 +1,6 @@
 function Date_search(){
     `use strict`;
+    document.getElementById("loading").innerHTML =`<img style=" height: 100px; width: 100px; " src="../images/200.gif">`;
     fetch('https://covid19.ddc.moph.go.th/api/Cases/round-1to2-all')
     .then(response => response.json())
     .then(data => {covid(data)})
